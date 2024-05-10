@@ -27,7 +27,7 @@ int main()
 	cout << "\n\n************************************************************\n\n";
 	DataBase.PrintDataBase();
 
-	cout << "\n\nÂâåäèòå èìÿ ñòóäåíòà äëÿ ïîèñêà: ";
+	cout << "\n\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã±Ã²Ã³Ã¤Ã¥Ã­Ã²Ã  Ã¤Ã«Ã¿ Ã¯Ã®Ã¨Ã±ÃªÃ : ";
 	char NameStudent[MaxNameStud];
 	ClearCache(MaxNameStud);
 	cin.getline(NameStudent, MaxNameStud);
@@ -35,7 +35,7 @@ int main()
 	/*CStudent* FoundStudent = DataBase.FindStudentDataBase(NameStudent);
 	if (FoundStudent != nullptr)
 	{
-		cout << "\n\nÑòóäåíò(û) ñ èìåíåì " << NameStudent << ":\n";
+		cout << "\n\nÃ‘Ã²Ã³Ã¤Ã¥Ã­Ã²(Ã») Ã± Ã¨Ã¬Ã¥Ã­Ã¥Ã¬ " << NameStudent << ":\n";
 		for (int i = 0; i < DataBase.GetSize(); ++i)
 		{
 			cout << "\n========================================\n";
@@ -45,7 +45,7 @@ int main()
 		delete[] FoundStudent;
 	}
 	else
-		cout << "Ñòóäåíò(û) ñ èìåíåì " << NameStudent << " íå íàéäåí(û).\n";*/
+		cout << "Ã‘Ã²Ã³Ã¤Ã¥Ã­Ã²(Ã») Ã± Ã¨Ã¬Ã¥Ã­Ã¥Ã¬ " << NameStudent << " Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­(Ã»).\n";*/
 
 	const int maxFoundStudents = 100;
 	CStudent FoundStudens[maxFoundStudents];
@@ -53,7 +53,7 @@ int main()
 
 	if (foundCount > 0)
 	{
-		cout << "\n\nÑòóäåíò(û) ñ èìåíåì " << NameStudent << ":\n";
+		cout << "\n\nÃ‘Ã²Ã³Ã¤Ã¥Ã­Ã²(Ã») Ã± Ã¨Ã¬Ã¥Ã­Ã¥Ã¬ " << NameStudent << ":\n";
 		for (int i = 0; i < foundCount; ++i)
 		{
 			cout << "\n----------------------------------------\n";
@@ -62,35 +62,35 @@ int main()
 		}
 	}
 	else
-		cout << "Ñòóäåíò ñ èìåíåì " << NameStudent << " íå íàéäåí.\n";
+		cout << "Ã‘Ã²Ã³Ã¤Ã¥Ã­Ã² Ã± Ã¨Ã¬Ã¥Ã­Ã¥Ã¬ " << NameStudent << " Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­.\n";
 
-	/*unsigned short SelectedCourse;
+	unsigned short SelectedCourse;
 	do
 	{
-		cout << "\n\nÂâåäèòå ïðîâåðÿåìûé êóðñ: ";
+		cout << "\n\nÃ‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã°Ã®Ã¢Ã¥Ã°Ã¿Ã¥Ã¬Ã»Ã© ÃªÃ³Ã°Ã±: ";
 		cin >> SelectedCourse;
 		if (SelectedCourse < 1 || SelectedCourse > 6)
-			cout << "Ââåäåíî íåêêîðåêòíîå ÷èñëî";
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¥Ã­Ã® Ã­Ã¥ÃªÃªÃ®Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®";
 	} while (SelectedCourse < 1 || SelectedCourse > 6);
 
-	cout << "\n\n1 - Ìàòåìàòèêà\n2 - Ôèçèêà\n3 - Ïðîãðàììèðîâàíèå\n";
+	cout << "\n\n1 - ÃŒÃ Ã²Ã¥Ã¬Ã Ã²Ã¨ÃªÃ \n2 - Ã”Ã¨Ã§Ã¨ÃªÃ \n3 - ÃÃ°Ã®Ã£Ã°Ã Ã¬Ã¬Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥\n";
 	unsigned short SelectedSubject;
 	do
 	{
-		cout << "Âûáåðèòå ïðåäìåò: ";
+		cout << "Ã‚Ã»Ã¡Ã¥Ã°Ã¨Ã²Ã¥ Ã¯Ã°Ã¥Ã¤Ã¬Ã¥Ã²: ";
 		cin >> SelectedSubject;
 		if (SelectedSubject < 1 || SelectedSubject > 3)
-			cout << "Ââåäåíî íåêêîðåêòíîå ÷èñëî";
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¥Ã­Ã® Ã­Ã¥ÃªÃªÃ®Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®";
 	} while (SelectedSubject < 1 || SelectedSubject > 3);
 
 	int AmountEx = DataBase.FindCountOfExcellentStudents(SelectedCourse, SelectedSubject);
 	
 	if (SelectedSubject == 1)
-		cout << "\nÊîëè÷åñòâî îòëè÷íèêîâ ïî ÌÀÒÅÌÀÒÈÊÅ íà " << SelectedCourse << " êóðñå: " << AmountEx;
+		cout << "\nÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã²Ã«Ã¨Ã·Ã­Ã¨ÃªÃ®Ã¢ Ã¯Ã® ÃŒÃ€Ã’Ã…ÃŒÃ€Ã’ÃˆÃŠÃ… Ã­Ã  " << SelectedCourse << " ÃªÃ³Ã°Ã±Ã¥: " << AmountEx;
 	else if (SelectedSubject == 2)
-		cout << "\nÊîëè÷åñòâî îòëè÷íèêîâ ïî ÔÈÇÈÊÅ íà " << SelectedCourse << " êóðñå: " << AmountEx;
+		cout << "\nÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã²Ã«Ã¨Ã·Ã­Ã¨ÃªÃ®Ã¢ Ã¯Ã® Ã”ÃˆÃ‡ÃˆÃŠÃ… Ã­Ã  " << SelectedCourse << " ÃªÃ³Ã°Ã±Ã¥: " << AmountEx;
 	else if (SelectedSubject == 3)
-		cout << "\nÊîëè÷åñòâî îòëè÷íèêîâ ïî ÏÐÎÃÐÀÌÌÈÐÎÂÀÍÈÞ íà " << SelectedCourse << " êóðñå: " << AmountEx;*/
+		cout << "\nÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã®Ã²Ã«Ã¨Ã·Ã­Ã¨ÃªÃ®Ã¢ Ã¯Ã® ÃÃÃŽÃƒÃÃ€ÃŒÃŒÃˆÃÃŽÃ‚Ã€ÃÃˆÃž Ã­Ã  " << SelectedCourse << " ÃªÃ³Ã°Ã±Ã¥: " << AmountEx;
 
 	return 0;
 }
